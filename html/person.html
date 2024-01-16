@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="result.html">
+        <table border="1" cellpadding="5" cellspacing="0">
+            <tbody>
+                <tr>
+                    <th>이름</th>
+                    <td><input type="text" placeholder="이름 입력"></td>
+                </tr>
+                <tr>
+                    <th>성별</th>
+                    <td>
+                        <fieldset>
+                            <legend>성별</legend>
+                            <div>
+                                <input type="radio" id="gender_m" name="gender" value="M" checked>
+                                <label for="gender_m">남자</label>
+                                <input type="radio" id="gender_f" name="gender" value="F">
+                                <label for="gender_f">여자</label>
+                            </div>
+                            
+                        </fieldset>
+                    </td>
+                </tr>
+                <tr>
+                    <th>색깔</th>
+                    <td>
+                        <select name="color" id="color">
+                            <option value="red">빨강 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</option>
+                            <option value="blue">파랑</option>
+                            <option value="green">초록</option>
+                            <option value="purple">보라</option>
+                            <option value="sky">하늘</option>
+                        </select>
+                    </td>  
+                </tr>
+                <tr>
+                    <th>취미</th>
+                    <td>
+                        <div>
+                            <input type="checkbox" id="hobby1" name="hobby" value="book">
+                            <label for="hobby">독서</label>
+                            <input type="checkbox" id="hobby2" name="hobby" value="movie">
+                            <label for="hobby">영화</label>
+                            <input type="checkbox" id="hobby3" name="hobby" value="music">
+                            <label for="hobby">음악</label>
+                            <input type="checkbox" id="hobby4" name="hobby" value="game">
+                            <label for="hobby">게임</label>
+                            <input type="checkbox" id="hobby5" name="hobby" value="shopping">
+                            <label for="hobby">쇼핑</label>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <th>과목</th>
+                    <td>
+                        <select name="subject" id="subject" multiple size="5">
+                            <option value="Java" selected="selected">Java </option>
+                            <option value="Servlet">Servlet &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</option>
+                            <option value="JSP">JSP</option>
+                            <option value="Spring">Spring</option>
+                        </select>
+
+                    </td>
+                </tr>
+            </tbody>
+            <tfoot>
+                <tr>
+                    <td colspan="2" align="center">
+                        <input type="submit" value="SEND">
+                        <input type="reset" value="CANCEL">
+                    </td>
+
+                </tr>
+
+            </tfoot>
+        </table>
+    </form>
+</body>
+</html>
