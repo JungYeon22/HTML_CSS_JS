@@ -4,14 +4,20 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <style>
+        #color, #subject{
+            width: 100px
+        }
+    </style>
 </head>
 <body>
-    <form action="result.html">
+    <!-- method의 기본 서비스전송방식은 get / method="get"(default)-->
+    <form action="result.html"> 
         <table border="1" cellpadding="5" cellspacing="0">
             <tbody>
                 <tr>
-                    <th>이름</th>
-                    <td><input type="text" placeholder="이름 입력"></td>
+                    <th width="70">이름</th>
+                    <td><input type="text"  name="name" id="user_name" size="30"placeholder="이름 입력"></td>
                 </tr>
                 <tr>
                     <th>성별</th>
@@ -31,12 +37,15 @@
                 <tr>
                     <th>색깔</th>
                     <td>
-                        <select name="color" id="color">
-                            <option value="red">빨강 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</option>
-                            <option value="blue">파랑</option>
-                            <option value="green">초록</option>
-                            <option value="purple">보라</option>
-                            <option value="sky">하늘</option>
+                        <select name="color" id="color" >
+                            <optgroup label="색깔">
+                                <option value="red">빨강 </option>
+                                <option value="blue">파랑</option>
+                                <option value="green">초록</option>
+                                <option value="magenta">보라</option>
+                                <option value="skyblue">하늘</option>
+                            </optgroup>
+                            
                         </select>
                     </td>  
                 </tr>
@@ -62,7 +71,7 @@
                     <td>
                         <select name="subject" id="subject" multiple size="5">
                             <option value="Java" selected="selected">Java </option>
-                            <option value="Servlet">Servlet &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</option>
+                            <option value="Servlet">Servlet</option>
                             <option value="JSP">JSP</option>
                             <option value="Spring">Spring</option>
                         </select>
