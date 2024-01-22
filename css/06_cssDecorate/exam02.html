@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        table{
+            border-collapse: collapse;/* 이중 테두리 제거*/
+        }
+        th, td{
+            text-align: left;
+            width: 100px;
+            height: 15px;
+            padding: 5px;  
+        }
+        thead, tfoot{
+            background-color: darkgray;
+            color: yellow;
+        }
+        tbody tr:nth-child(even){   /* 1행부터 시작, even, odd */
+            background-color: aliceblue;
+        }
+        tbody tr:hover{
+            background-color: darksalmon;
+        }
+    </style>
+</head>
+<body>
+    <h3>1학기 성적</h3>
+    <hr>
+    <table border="1">
+        <thead>
+            <tr>
+                <th>이름</th>
+                <th>HTML</th>
+                <th>CSS</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>홍길동</td><td>80</td><td>70</td>
+            </tr>
+            <tr>
+                <td>박정연</td><td>100</td><td>100</td>
+            </tr>
+            <tr>
+                <td>김유주</td><td>30</td><td>20</td>
+            </tr>
+            <tr>
+                <td>김동현</td><td>90</td><td>70</td>
+            </tr>
+        </tbody>
+        <tfoot>
+            <tr>
+                <th>합</th><th>300</th><th>260</th>
+            </tr>
+
+        </tfoot>
+    </table>
+    
+</body>
+</html>
