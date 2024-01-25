@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <script>
+        function f(x,y){
+            var z = x + y;
+
+            if(z < 10){
+                return; //함수를 벗어나라
+            }
+            return z;   //반환
+        }
+        let a = f(2,4);
+        let b = f(3,8);
+        let c = f(2,10);
+        document.write("<h2>" + a + "</h2>");
+        document.write("<h2>" + b + "</h2>");
+        document.write("<h2>" + c + "</h2>");
+    </script>
+    
+</body>
+</html>
