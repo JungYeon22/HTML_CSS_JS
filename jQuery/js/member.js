@@ -51,13 +51,44 @@ $(function(){
 
         if( $('select[name="job"] option:selected').index() == 0 ){
             alert("직업을 선택하세요.");
-
             $('select[name="job"] option:eq(2)').attr('selected', true);
             return false;
         }
 
         //입력한 내용을 화면에 출력
-        var gender = $('input[type="gender"]:checked').val();
+        var gender = $('input[name="gender"]:checked').val();
+
+        var hobby = $('input[name="hobby"]:checked');
+        var hobby_val = " ";
+        hobby.each(function(){
+            hobby_val += $(this).val() + " ";
+        });
+
+        var job = $('select[name="job"] option:selected').val(); //select 에서 선택할 값을 job에 넣기
+
+        var result = '<ul>' 
+                    + '<li> 아이디 : ' + user_id + '</li>' 
+                    + '<li> 비밀번호 : ' + user_pw + '</li>' 
+                    + '<li> 성별 : ' + gender + '</li>' 
+                    + '<li> 이메일 : ' + email + '</li>' 
+                    + '<li> URL : ' + url + '</li>' 
+                    + '<li> 핸드폰 : ' + phone + '</li>' 
+                    + '<li> 취미 : ' + hobby_val + '</li>' 
+                    + '<li> 직업 : ' + job + '</li>'                     
+                    + '</ul>';
+
+         var result2 = `<ul> 
+                     <li> 아이디 :  ${user_id}   </li> 
+                     <li> 비밀번호 :   ${user_pw}  </li> 
+                     <li> 성별 :   ${gender}  </li> 
+                     <li> 이메일 :   ${email}  </li> 
+                     <li> URL :   ${url}  </li> 
+                     <li> 핸드폰 :   ${phone}  </li> 
+                     <li> 취미 :   ${hobby_val}  </li> 
+                     <li> 직업 :   ${job}  </li>                     
+                     </ul>`;
+
+        $('body').html(result2);
 
         return false;
     });
