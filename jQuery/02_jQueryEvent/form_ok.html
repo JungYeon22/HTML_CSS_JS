@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>회원가입</h1>
+    <form action="" name="form1">
+        <div id="input">
+            <h2>저장되었습니다.</h2>
+            <input type="button" id="backBtn" value="이전 페이지로 이동" class="myButton">
+        </div>
+    </form>
+    
+    <script src="https://code.jQuery.com/jquery-3.7.1.min.js"></script>
+    <script>
+        $(function(){
+            $('.myButton').click(function(e){
+                //history.go(-1);       // 기존에 있어 데이터가 그대로 남아있다.
+                location.href='exam10.html';        
+            })
+        })
+    </script>
+</body>
+</html>
